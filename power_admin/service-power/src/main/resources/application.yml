@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: service_admin
+  profiles:
+    active: dev

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--
+/**
+*@BelongsPackage: mappers.userMapper
+*@Author: Liao YunYang
+*@Description: 
+*@CreateTime: 2023-07-02  23:58
+*@Version: 1.0
+*/
+-->
+<mapper namespace="com.liao.power.mappers.SysRoleMenuMapper">
+    <!--namespace 一般要求使用接口的全限定名称 -->
+
+    <!--为角色添加菜单-->
+    <insert id="insertUserRoleByUserIdAndRoleIds">
+        INSERT INTO sys_role_menu
+        <trim prefix="(" suffix=")">
+            role_id, menu_id
+        </trim>
+        VALUES
+        <foreach collection="menuIdList" item="menuId" separator=",">
+            <trim prefix="(" suffix=")">
+                #{roleId}, #{menuId}
+            </trim>
+        </foreach>
+    </insert>
+
+    <!--根据角色id删除所有菜单-->
+    <delete id="deleteRoleMenuAllByRoleId">
+        delete
+        FROM sys_role_menu
+        WHERE role_id = #{roleId}
+    </delete>
+
+</mapper>
+
+

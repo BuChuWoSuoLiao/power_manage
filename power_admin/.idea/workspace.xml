@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="502cbf27-9c59-4f12-a212-33c8fa77962f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/common/service-util/src/main/java/com/liao/exception/SqlException/UpdateException.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/service-util/src/main/java/com/liao/exception/SqlException/UpdateException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/service-util/src/main/java/com/liao/exception/UserException/UserNotLoginException.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/service-util/src/main/java/com/liao/exception/UserException/UserNotLoginException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/service-util/src/main/java/com/liao/exception/UserException/UsernameDuplicatedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/service-util/src/main/java/com/liao/exception/UserException/UsernameDuplicatedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/service-util/src/main/java/com/liao/exception/UserException/UsernameNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/service-util/src/main/java/com/liao/exception/UserException/UsernameNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.path_IS_UNDEFINED/logs/NetWorkDisk.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.path_IS_UNDEFINED/logs/NetWorkDisk.log.20230620.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.path_IS_UNDEFINED/logs/NetWorkDisk.log.20230628.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.path_IS_UNDEFINED/logs/NetWorkDisk.log.20230629.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.path_IS_UNDEFINED/logs/NetWorkDisk.log.20230630.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.path_IS_UNDEFINED/logs/NetWorkDisk.log.20230701.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.path_IS_UNDEFINED/logs/NetWorkDisk.log.20230702.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.path_IS_UNDEFINED/logs/NetWorkDisk.log.20230703.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.path_IS_UNDEFINED/logs/NetWorkDisk.log.20230705.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.path_IS_UNDEFINED/logs/NetWorkDisk.log.20230706.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.path_IS_UNDEFINED/logs/NetWorkDisk.log.20230706.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.path_IS_UNDEFINED/logs/NetWorkDisk.log.20230707.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.path_IS_UNDEFINED/logs/NetWorkDisk.log.20230708.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/liao/model/entity/enums/ResultCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/liao/model/entity/enums/ResultCodeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/liao/model/entity/vo/SysUserVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/liao/model/entity/vo/SysUserVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/com/liao/model/entity/enums/ResultCodeEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/liao/model/entity/enums/ResultCodeEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-power/log.path_IS_UNDEFINED/logs/NetWorkDisk.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-power/log.path_IS_UNDEFINED/logs/NetWorkDisk.log.20230620.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-power/log.path_IS_UNDEFINED/logs/NetWorkDisk.log.20230628.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-power/log.path_IS_UNDEFINED/logs/NetWorkDisk.log.20230702.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-power/src/main/java/com/liao/power/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-power/src/main/java/com/liao/power/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-power/src/main/java/com/liao/power/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-power/src/main/java/com/liao/power/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-power/src/main/java/com/liao/power/handler/AccessDeniedHandlerImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-power/src/main/java/com/liao/power/handler/AuthenticationEntryPointImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-power/src/main/java/com/liao/power/mappers/SysRoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-power/src/main/java/com/liao/power/mappers/SysRoleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-power/src/main/java/com/liao/power/service/impl/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-power/src/main/java/com/liao/power/service/impl/AccountServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-power/src/main/java/com/liao/power/service/impl/SysMenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-power/src/main/java/com/liao/power/service/impl/SysMenuServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-power/src/main/java/com/liao/power/service/impl/SysRoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-power/src/main/java/com/liao/power/service/impl/SysRoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-power/src/main/java/com/liao/power/service/impl/SysUserRoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-power/src/main/java/com/liao/power/service/impl/SysUserRoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-power/src/main/java/com/liao/power/service/impl/SysUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-power/src/main/java/com/liao/power/service/impl/SysUserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-power/src/main/java/com/liao/power/service/impl/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-power/src/main/java/com/liao/power/service/impl/UserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-power/src/main/java/com/liao/power/utils/MenuHelperUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-power/src/main/java/com/liao/power/utils/MenuHelperUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-power/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service-power/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-power/src/main/resources/logback-spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-power/src/main/resources/mappers/userMapper/SysRoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service-power/src/main/resources/mappers/userMapper/SysRoleMapper.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="spring-beans.schema" />
+        <option value="Mybatis" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="security" />
+                    <option name="lastUsedInstant" value="1688548950" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1688548829" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/Maven/AZ/apache-maven-3.6.0" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="ProjectId" id="2RQaQNJN2A1BDveEJNdMmANFen5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelOrder2&quot;: &quot;2&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth2&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Git/java_Project/power_admin/service-power/src/main/java/com/liao/power&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;c203fa0c806ae0fabb5fa40d664718eb&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Git\java_Project\power_admin\service-power\src\main\java\com\liao\power" />
+      <recent name="E:\Git\java_Project\power_admin\common\common-util\src\main\java\com\liao\utils" />
+      <recent name="E:\Git\java_Project\power_admin\common\service-util\src\main\java\com\liao\exception\CommonException" />
+      <recent name="E:\Git\java_Project\power_admin\common\service-util\src\main\java\com\liao\exception\UserException" />
+      <recent name="E:\Git\java_Project\power_admin\common\service-util\src\main\java\com\liao\exception\SqlException" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Git\java_Project\power_admin\service-power\src\main\resources\mappers\userMapper" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.liao.power.config" />
+      <recent name="com.liao.utils" />
+      <recent name="com.liao.security.config" />
+      <recent name="com.liao.model.entity.po" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn -U idea:idea" />
+      <command value="mvn install -DskipTests" />
+    </option>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.PowerApplication">
+    <configuration name="JwtUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.liao.utils.JwtUtil" />
+      <module name="common-util" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.liao.power.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServicePowerApplicationTests.t3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="service-power" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.liao.power.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.liao.power" />
+      <option name="MAIN_CLASS_NAME" value="com.liao.power.ServicePowerApplicationTests" />
+      <option name="METHOD_NAME" value="t3" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServicePowerApplicationTests.t4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="service-power" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.liao.power.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.liao.power" />
+      <option name="MAIN_CLASS_NAME" value="com.liao.power.ServicePowerApplicationTests" />
+      <option name="METHOD_NAME" value="t4" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServicePowerApplicationTests.t5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="service-power" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.liao.power.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.liao.power" />
+      <option name="MAIN_CLASS_NAME" value="com.liao.power.ServicePowerApplicationTests" />
+      <option name="METHOD_NAME" value="t5" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServicePowerApplicationTests.t6" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="service-power" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.liao.power.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.liao.power" />
+      <option name="MAIN_CLASS_NAME" value="com.liao.power.ServicePowerApplicationTests" />
+      <option name="METHOD_NAME" value="t6" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PowerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="service-power" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.liao.power.PowerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.JwtUtil" />
+      <item itemvalue="JUnit.ServicePowerApplicationTests.t6" />
+      <item itemvalue="JUnit.ServicePowerApplicationTests.t5" />
+      <item itemvalue="JUnit.ServicePowerApplicationTests.t3" />
+      <item itemvalue="JUnit.ServicePowerApplicationTests.t4" />
+      <item itemvalue="Spring Boot.PowerApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ServicePowerApplicationTests.t6" />
+        <item itemvalue="Application.JwtUtil" />
+        <item itemvalue="JUnit.ServicePowerApplicationTests.t5" />
+        <item itemvalue="JUnit.ServicePowerApplicationTests.t4" />
+        <item itemvalue="JUnit.ServicePowerApplicationTests.t3" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="502cbf27-9c59-4f12-a212-33c8fa77962f" name="Changes" comment="" />
+      <created>1687184742271</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1687184742271</updated>
+      <workItem from="1687184743611" duration="5122000" />
+      <workItem from="1687221398474" duration="4189000" />
+      <workItem from="1687225719090" duration="12455000" />
+      <workItem from="1687307884835" duration="856000" />
+      <workItem from="1687309958020" duration="652000" />
+      <workItem from="1687345188621" duration="5000" />
+      <workItem from="1687422470879" duration="624000" />
+      <workItem from="1687944713105" duration="6808000" />
+      <workItem from="1687968157219" duration="1625000" />
+      <workItem from="1687969959717" duration="115000" />
+      <workItem from="1688019345167" duration="14061000" />
+      <workItem from="1688042159645" duration="664000" />
+      <workItem from="1688042884372" duration="13764000" />
+      <workItem from="1688100739076" duration="8937000" />
+      <workItem from="1688204337846" duration="19230000" />
+      <workItem from="1688280220683" duration="3669000" />
+      <workItem from="1688361801455" duration="22000" />
+      <workItem from="1688389143623" duration="1886000" />
+      <workItem from="1688451044722" duration="4504000" />
+      <workItem from="1688548628513" duration="871000" />
+      <workItem from="1688553783769" duration="13228000" />
+      <workItem from="1688580212683" duration="5699000" />
+      <workItem from="1688629131583" duration="22001000" />
+      <workItem from="1688734743787" duration="4913000" />
+      <workItem from="1688808168084" duration="1271000" />
+      <workItem from="1688813159125" duration="54000" />
+      <workItem from="1688816504739" duration="13000" />
+      <workItem from="1688913408500" duration="3933000" />
+      <workItem from="1688989029000" duration="5308000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service-power/src/main/java/com/liao/power/handler/AuthenticationEntryPointImpl.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="claims" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/power_admin$PowerApplication.ic" NAME="PowerApplication Coverage Results" MODIFIED="1688578383098" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>

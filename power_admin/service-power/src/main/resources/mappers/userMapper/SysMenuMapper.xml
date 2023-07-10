@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--
+/**
+*@BelongsPackage: mappers.userMapper
+*@Author: Liao YunYang
+*@Description: 菜单管理持久层
+*@CreateTime: 2023-07-02  16:23
+*@Version: 1.0
+*/
+-->
+<mapper namespace="com.liao.power.mappers.SysMenuMapper">
+    <!--namespace 一般要求使用接口的全限定名称 -->
+    <resultMap id="SysMenuResultMap" type="com.liao.model.entity.po.SysMenu">
+        <id column="id" property="id"></id>
+        <result column="parent_id" property="parentId"/>
+        <result column="name" property="name"/>
+        <result column="type" property="type"/>
+        <result column="path" property="path"/>
+        <result column="component" property="component"/>
+        <result column="perms" property="perms"/>
+        <result column="icon" property="icon"/>
+        <result column="sort_value" property="sortValue"/>
+        <result column="status" property="status"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+    </resultMap>
+
+    <!--通用查询-->
+    <sql id="base_column">
+        id
+        , parent_id, name, type,path, component, perms,icon,sort_value,status,create_time,update_time,is_deleted
+    </sql>
+
+    <!--通用选择列表-->
+    <sql id="base_update">
+        <if test="parentId != null">parent_id = #{parentId},</if>
+        <if test="name != null">name = #{name},</if>
+        <if test="type != null">type = #{type},</if>
+        <if test="path != null">path = #{path},</if>
+        <if test="component != null">component = #{component},</if>
+        <if test="perms != null">perms = #{perms},</if>
+        <if test="icon != null">icon = #{icon},</if>
+        <if test="sortValue != null">sort_value = #{sortValue},</if>
+        <if test="status != null">status = #{status},</if>
+        <if test="createTime != null">create_time = #{createTime},</if>
+        <if test="updateTime != null">update_time = #{updateTime},</if>
+        <if test="isDeleted != null">is_deleted = #{isDeleted},</if>
+    </sql>
+
+    <!--获取所有菜单列表-->
+    <select id="selectMenuAll" resultMap="SysMenuResultMap">
+        SELECT
+        <include refid="base_column"></include>
+        FROM sys_menu
+        <if test="flag == true">
+            WHERE status = 1
+        </if>
+    </select>
+
+    <!--根据角色id获取所对应的菜单对象-->
+    <select id="selectMenusByRoleId" resultMap="SysMenuResultMap">
+        SELECT m.id,
+               m.parent_id,
+               m.NAME,
+               m.type,
+               m.path,
+               m.component,
+               m.perms,
+               m.icon,
+               m.sort_value,
+               m.STATUS,
+               m.create_time,
+               m.update_time,
+               m.is_deleted
+        FROM sys_menu m
+                 LEFT JOIN sys_role_menu rm ON m.id = rm.menu_id
+        WHERE rm.role_id = #{roleId}
+    </select>
+
+    <!--根据id查询以该id的子节点-->
+    <select id="selectMenuParentByMenuId" resultMap="SysMenuResultMap">
+        SELECT
+        <include refid="base_column"></include>
+        FROM sys_menu
+        WHERE parent_id = #{id}
+    </select>
+
+    <!--添加菜单-->
+    <insert id="insertMenu" parameterType="com.liao.model.entity.po.SysMenu">
+        INSERT INTO sys_menu
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="menu.parentId != null">parent_id,</if>
+            <if test="menu.name != null">name,</if>
+            <if test="menu.type != null">type,</if>
+            <if test="menu.path != null">path,</if>
+            <if test="menu.component != null">component,</if>
+            <if test="menu.perms != null">perms,</if>
+            <if test="menu.icon != null">icon,</if>
+            <if test="menu.sortValue != null">sort_value,</if>
+            <if test="menu.status != null">status,</if>
+            <if test="menu.createTime != null">create_time,</if>
+            <if test="menu.updateTime != null">update_time,</if>
+        </trim>
+        VALUES
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="menu.parentId != null">#{menu.parentId},</if>
+            <if test="menu.name != null">#{menu.name},</if>
+            <if test="menu.type != null">#{menu.type},</if>
+            <if test="menu.path != null">#{menu.path},</if>
+            <if test="menu.component != null">#{menu.component},</if>
+            <if test="menu.perms != null">#{menu.perms},</if>
+            <if test="menu.icon != null">#{menu.icon},</if>
+            <if test="menu.sortValue != null">#{menu.sortValue},</if>
+            <if test="menu.status != null">#{menu.status},</if>
+            <if test="menu.createTime != null">#{menu.createTime},</if>
+            <if test="menu.updateTime != null">#{menu.updateTime},</if>
+        </trim>
+    </insert>
+
+    <!--修改菜单-->
+    <update id="updateMenuById" parameterType="com.liao.model.entity.po.SysMenu">
+        UPDATE sys_menu
+        <set>
+            <trim suffixOverrides=",">
+                <include refid="base_update"></include>
+            </trim>
+        </set>
+        WHERE
+        id = #{id}
+    </update>
+
+    <!--根据id列表删除菜单-->
+    <delete id="deleteMenuByIds">
+        DELETE
+        FROM sys_menu
+        WHERE id IN
+        <trim prefix="(" suffix=")">
+            <foreach collection="idList" item="id" separator=",">
+                #{id}
+            </foreach>
+        </trim>
+    </delete>
+
+    <!--根据用户id查询该用户的菜单列表-->
+    <select id="selectMenusByUserId" resultMap="SysMenuResultMap">
+        SELECT DISTINCT m.id,
+               m.parent_id,
+               m.NAME,
+               m.type,
+               m.path,
+               m.component,
+               m.perms,
+               m.icon,
+               m.sort_value,
+               m.STATUS,
+               m.create_time,
+               m.update_time,
+               m.is_deleted
+        FROM sys_user_role ur
+                 RIGHT JOIN sys_role_menu rm ON ur.role_id = rm.role_id
+                 RIGHT JOIN sys_menu m ON m.id = rm.menu_id
+        WHERE ur.user_id = #{userId}
+          AND m.`status` = 1
+        ORDER BY m.sort_value DESC
+    </select>
+
+    <!--根据用户id查询该用户的菜单列表-->
+    <select id="selectMenusPermsByUserId" resultMap="SysMenuResultMap">
+        SELECT DISTINCT m.id,
+                        m.parent_id,
+                        m.NAME,
+                        m.type,
+                        m.path,
+                        m.component,
+                        m.perms,
+                        m.icon,
+                        m.sort_value,
+                        m.STATUS,
+                        m.create_time,
+                        m.update_time,
+                        m.is_deleted
+        FROM sys_user_role ur
+                 RIGHT JOIN sys_role_menu rm ON ur.role_id = rm.role_id
+                 RIGHT JOIN sys_menu m ON m.id = rm.menu_id
+        WHERE ur.user_id = #{userId}
+          AND m.`status` = 1
+          AND m.type = 2
+        ORDER BY m.sort_value DESC
+    </select>
+
+</mapper>
+
+

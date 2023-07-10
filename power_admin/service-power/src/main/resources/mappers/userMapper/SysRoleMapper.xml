@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--
+/**
+*@BelongsPackage: mappers
+*@Author: Liao YunYang
+*@Description: 
+*@CreateTime: 2023-06-19  15:38
+*@Version: 1.0
+*/
+-->
+<mapper namespace="com.liao.power.mappers.SysRoleMapper">
+    <!--namespace 一般要求使用接口的全限定名称 -->
+
+    <!--返回类映射-->
+    <resultMap id="SysRoleResultMap" type="com.liao.model.entity.po.SysRole">
+        <id column="id" property="id"/>
+        <result column="role_name" property="roleName"/>
+        <result column="role_code" property="roleCode"/>
+        <result column="description" property="description"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+    </resultMap>
+
+    <!--通用查询-->
+    <sql id="base_column">
+        id
+        , role_name, role_code, description,create_time, update_time, is_deleted
+    </sql>
+
+    <!--通用选择列表-->
+    <sql id="base_update">
+        <if test="roleName != null">role_name = #{roleName},</if>
+        <if test="roleCode != null">role_code = #{roleCode},</if>
+        <if test="description != null">description = #{description},</if>
+        <if test="createTime != null">create_time = #{createTime},</if>
+        <if test="updateTime != null">update_time = #{updateTime},</if>
+        <if test="isDeleted != null">is_deleted = #{isDeleted}</if>
+    </sql>
+
+    <!--查询所有记录-->
+    <select id="selectByAll" resultMap="SysRoleResultMap" parameterType="com.liao.model.entity.query.SysRoleQuery">
+        SELECT
+        <include refid="base_column"></include>
+        FROM sys_role
+        <if test="query.roleName != null">
+            WHERE
+            role_name = #{query.roleName}
+        </if>
+    </select>
+
+    <!--添加角色-->
+    <select id="insertRole" parameterType="com.liao.model.entity.po.SysRole">
+        INSERT INTO sys_role
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="role.roleName != null">role_name,</if>
+            <if test="role.roleCode != null">role_code,</if>
+            <if test="role.description != null">description,</if>
+            <if test="role.createTime != null">create_time,</if>
+            <if test="role.updateTime != null">update_time,</if>
+            <if test="role.isDeleted != null">is_deleted,</if>
+        </trim>
+        VALUES
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="role.roleName != null">#{role.roleName},</if>
+            <if test="role.roleCode != null">#{role.roleCode},</if>
+            <if test="role.description != null">#{role.description},</if>
+            <if test="role.createTime != null">#{role.createTime},</if>
+            <if test="role.updateTime != null">#{role.updateTime},</if>
+            <if test="role.isDeleted != null">#{role.isDeleted},</if>
+        </trim>
+    </select>
+
+    <!--根据id查询记录-->
+    <select id="selectById" resultMap="SysRoleResultMap">
+        SELECT
+        <include refid="base_column"></include>
+        FROM sys_role
+        WHERE id = #{id}
+    </select>
+
+    <!--根据角色名称查询角色信息-->
+    <select id="selectRoleByRoleName" resultMap="SysRoleResultMap">
+        SELECT
+        <include refid="base_column"></include>
+        FROM sys_role
+        WHERE role_name = #{roleName}
+    </select>
+
+    <!--根据role对象更改数据库值-->
+    <update id="updateRoleByRole" parameterType="com.liao.model.entity.po.SysRole">
+        UPDATE sys_role
+        <set>
+            <include refid="base_update"></include>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <!--根据id删除角色-->
+    <delete id="deleteRoleByIds">
+        DELETE
+        FROM sys_role
+        WHERE id IN
+        <trim prefix="(" suffix=")">
+            <foreach collection="list" item="id" separator=",">
+                #{id}
+            </foreach>
+        </trim>
+    </delete>
+
+    <!--根据用户id获取角色列表-->
+    <select id="selectRolesByUserId" resultMap="SysRoleResultMap">
+        SELECT
+        <include refid="base_column"></include>
+        FROM sys_role r
+        WHERE r.id = ANY (SELECT ur.role_id FROM sys_user_role ur WHERE ur.user_id = #{id})
+    </select>
+
+</mapper>
+
+

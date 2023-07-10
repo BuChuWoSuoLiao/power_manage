@@ -1,0 +1,58 @@
+server:
+  port: 8100
+  servlet:
+    context-path: /api
+
+spring:
+  # 更改springboot路径匹配模式
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  application:
+    name: power-admin #项目名
+  # 数据源
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.NonRegisteringDriver
+    username: xxxx
+    password: xxxxxxx
+    url: jdbc:mysql://127.0.0.1:3306/power_admin?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      minimum-idle: 5
+      idle-timeout: 180000
+      maximum-pool-size: 10
+      auto-commit: true
+      max-lifetime: 180000
+      connection-timeout: 3000
+      connection-test-query: SELECT 1
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  # redis
+  redis:
+    host: xx.xxx.xx.xxx
+    port: 6379
+    password: xxxxxxx
+
+
+mybatis:
+  mapper-locations: classpath:mappers/*/*.xml   #映射文件地址
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+##pageHelper分页插件配置
+pagehelper:
+  ##方言配置为mysql数据库
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countsql
+
+
+# 日志配置
+log:
+  root:
+    level: debug
+
+

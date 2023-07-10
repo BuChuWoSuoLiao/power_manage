@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--
+/**
+*@BelongsPackage: mappers.userMapper
+*@Author: Liao YunYang
+*@Description: 
+*@CreateTime: 2023-07-01  18:09
+*@Version: 1.0
+*/
+-->
+<mapper namespace="com.liao.power.mappers.SysUserMapper">
+    <!--namespace 一般要求使用接口的全限定名称 -->
+    <!--返回类映射-->
+    <resultMap id="SysUserResultMap" type="com.liao.model.entity.po.SysUser">
+        <id column="id" property="id"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="name" property="name"/>
+        <result column="phone" property="phone"/>
+        <result column="head_url" property="headUrl"/>
+        <result column="dept_id" property="deptId"/>
+        <result column="post_id" property="postId"/>
+        <result column="description" property="description"/>
+        <result column="open_id" property="openId"/>
+        <result column="status" property="status"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+    </resultMap>
+
+    <!--返回用户对应的角色信息-->
+    <resultMap id="SysUserAndRolesResultMap" type="com.liao.model.entity.po.SysUser">
+        <id column="id" property="id"/>
+        <result column="username" property="username"/>
+        <result column="name" property="name"/>
+        <result column="phone" property="phone"/>
+        <result column="head_url" property="headUrl"/>
+        <result column="status" property="status"/>
+        <result column="create_time" property="createTime"/>
+        <collection property="roleList"
+                    select="com.liao.power.mappers.SysRoleMapper.selectRolesByUserId"
+                    column="id">
+            <id column="id" property="id"/>
+            <result column="role_name" property="roleName"/>
+            <result column="role_code" property="roleCode"/>
+            <result column="description" property="description"/>
+            <result column="create_time" property="createTime"/>
+            <result column="update_time" property="updateTime"/>
+            <result column="is_deleted" property="isDeleted"/>
+        </collection>
+    </resultMap>
+
+    <!--通用查询-->
+    <sql id="base_column">
+        id
+        , username, password, name,phone, head_url, dept_id,post_id,description,open_id,status,create_time,update_time,is_deleted
+    </sql>
+
+    <!--通用更改条件-->
+    <sql id="base_update">
+        <if test="user.username != null">username = #{user.username},</if>
+        <if test="user.password != null">password = #{user.password},</if>
+        <if test="user.name != null">name = #{user.name},</if>
+        <if test="user.phone != null">phone = #{user.phone},</if>
+        <if test="user.headUrl != null">head_url = #{user.headUrl},</if>
+        <if test="user.deptId != null">dept_id = #{user.deptId},</if>
+        <if test="user.postId != null">post_id = #{user.postId},</if>
+        <if test="user.description != null">description = #{user.description},</if>
+        <if test="user.openId != null">open_id = #{user.openId},</if>
+        <if test="user.status != null">status = #{user.status},</if>
+        <if test="user.createTime != null">create_time = #{user.createTime},</if>
+        <if test="user.updateTime != null">update_time = #{user.updateTime},</if>
+        <if test="user.isDeleted != null">is_deleted = #{user.isDeleted},</if>
+    </sql>
+
+    <!--查询所有用户-->
+    <select id="selectByAll" resultMap="SysUserAndRolesResultMap" parameterType="com.liao.model.entity.po.SysUser">
+        select
+        <include refid="base_column"></include>
+        FROM sys_user
+        <if test="query.userName != null">
+            WHERE username = #{query.userName}
+        </if>
+    </select>
+
+    <!--根据id查询用户-->
+    <select id="selectUserById" resultMap="SysUserAndRolesResultMap">
+        SELECT
+        <include refid="base_column"></include>
+        FROM sys_user
+        WHERE id = #{id}
+    </select>
+
+    <select id="selectUserByUserName" resultMap="SysUserResultMap">
+        SELECT
+        <include refid="base_column"></include>
+        FROM sys_user
+        WHERE username = #{userName}
+    </select>
+
+    <!--添加用户-->
+    <insert id="insertUser" parameterType="com.liao.model.entity.po.SysUser">
+        INSERT INTO sys_user
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="user.username != null">username,</if>
+            <if test="user.password != null">password,</if>
+            <if test="user.name != null">name,</if>
+            <if test="user.phone != null">phone,</if>
+            <if test="user.headUrl != null">head_url,</if>
+            <if test="user.deptId != null">dept_id,</if>
+            <if test="user.postId != null">post_id,</if>
+            <if test="user.description != null">description,</if>
+            <if test="user.openId != null">open_id,</if>
+            <if test="user.status != null">status,</if>
+            <if test="user.createTime != null">create_time,</if>
+            <if test="user.updateTime != null">update_time,</if>
+            <if test="user.isDeleted != null">is_deleted,</if>
+        </trim>
+        VALUES
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="user.username != null">#{user.username},</if>
+            <if test="user.password != null">#{user.password},</if>
+            <if test="user.name != null">#{user.name},</if>
+            <if test="user.phone != null">#{user.phone},</if>
+            <if test="user.headUrl != null">#{user.headUrl},</if>
+            <if test="user.deptId != null">#{user.deptId},</if>
+            <if test="user.postId != null">#{user.postId},</if>
+            <if test="user.description != null">#{user.description},</if>
+            <if test="user.openId != null">#{user.openId},</if>
+            <if test="user.status != null">#{user.status},</if>
+            <if test="user.createTime != null">#{user.createTime},</if>
+            <if test="user.updateTime != null">#{user.updateTime},</if>
+            <if test="user.isDeleted != null">#{user.isDeleted},</if>
+        </trim>
+    </insert>
+
+    <!--更改用户信息-->
+    <update id="updateUserByUser" parameterType="com.liao.model.entity.po.SysUser">
+        UPDATE sys_user
+        <set>
+            <include refid="base_update"></include>
+        </set>
+        WHERE id = #{user.id}
+    </update>
+
+    <!--根据id删除用户-->
+    <delete id="deleteUserByIds">
+        DELETE FROM sys_user
+        WHERE id IN
+        <trim prefix="(" suffix=")">
+            <foreach collection="list" item="id" separator=",">
+                #{id}
+            </foreach>
+        </trim>
+    </delete>
+
+</mapper>
+
+
